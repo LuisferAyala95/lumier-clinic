@@ -2,7 +2,7 @@
 
 <nav class="navbar menu">
 
-		<a href="#" class="menu-item">
+		<a href="${pageContext.request.contextPath}/dashboard" class="menu-item">
 			<span style="padding-right: 10px">
             		<i class="bi bi-columns-gap"></i>
             </span>
@@ -16,7 +16,7 @@
 	    Citas
 	</a>
 
-	<a href="#" class="menu-item">
+	<a href="${pageContext.request.contextPath}/patients" class="menu-item">
 		<span style="padding-right: 10px">
 			<i class="bi bi-people-fill"></i>
          </span>

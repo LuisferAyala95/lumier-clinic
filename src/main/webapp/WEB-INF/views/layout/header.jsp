@@ -6,7 +6,7 @@
 			<h2>Lumier</h2>
 		</div>
 		<div class="col-md-10" style="padding: 1rem; border: 1px solid #1e293b;">
-			<h2>Dashboard</h2>
+			<h1>${title}</h1>
 		</div>
 	</div>
 </div>
