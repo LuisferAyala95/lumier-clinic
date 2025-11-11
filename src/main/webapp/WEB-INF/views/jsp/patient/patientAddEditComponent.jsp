@@ -1,14 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <div class="container-border mt-3" style="padding: 2rem">
 	<h2>Datos básicos</h2>
 	<p>Ingrese la información general del paciente</p>
 	<br>
-	<form action="" id="patientAddEdit">
+	<form id="patientAddEdit">
 			<div class="row mb-3">
 				<div class="col-md-6">
                     <div class="form-group">
-                	    <label for="typeDocument" style="font-weight: 500">Tipo de documento</label>
-                        <select class="form-control" id="typeDocument">
+                	    <label for="tipoDocumento" style="font-weight: 500">Tipo de documento</label>
+                        <select class="form-control" id="tipoDocumento">
                           <option>Tarjeta de identidad</option>
                           <option>Cédula</option>
                           <option>Cédula extranjera</option>
@@ -44,7 +45,7 @@
                 <div class="col-md-6">
 					<div class="form-group">
                         <label for="date" style="font-weight: 500">Fecha de nacimiento</label>
-                        <input type="text" class="form-control" id="date">
+                        <input type="date" class="form-control" id="date">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -94,4 +95,6 @@
             </div>
         </div>
 	</form>
+
+<div id="alerta" class="alert mt-3 d-none"></div>
 </div>

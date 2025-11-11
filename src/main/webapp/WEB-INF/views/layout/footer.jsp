@@ -1,2 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<h2>Este es el footer</h2>
+<div style="padding: 1rem">
+	<p style="text-align: center;">&copy; 2025 Lumier Clínica. Todos los derechos reservados.</p>
+</div>

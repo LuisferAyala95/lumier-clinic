@@ -42,6 +42,10 @@ i {
 	font-size: 2rem; color: var(--color-gray);
 }
 
+p {
+	color: var(--color-gray) !important;
+}
+
 input, select {
 	background-color: var(--background-dark) !important;
 	color: var(--color-white) !important;

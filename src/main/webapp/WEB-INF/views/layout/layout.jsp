@@ -8,7 +8,23 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 
+     <script src="//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+     <!-- jQuery 3.6.3 -->
+     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+             integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+             crossorigin="anonymous"></script>
+
+     <!-- Toast CSS -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+     <!-- Toast JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
+	<script>
+        const contextPath = '${pageContext.request.contextPath}';
+    </script>
+	<script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 
 
 </head>
@@ -29,16 +45,7 @@
 
     <footer><tiles:insertAttribute name="footer"/></footer>
 
-     <script src="//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-     <!-- jQuery 3.6.3 -->
-     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-             integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-             crossorigin="anonymous"></script>
-
-
-
-     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 
 </body>
 </html>
