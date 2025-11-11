@@ -47,6 +47,12 @@ input, select {
 	color: var(--color-white) !important;
 }
 
+input::placeholder {
+  color: #9ca3af !important; /* gris similar a text-slate-400 */
+  opacity: 1; /* asegura que el color se muestre con la opacidad completa */
+}
+
+
 
 
 .menu {
