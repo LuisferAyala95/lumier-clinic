@@ -25,7 +25,7 @@ public class HomeController {
 
     @RequestMapping("/patients")
     public String patients(Model model) {
-        model.addAttribute("title", "Patients");
+        model.addAttribute("title", "Pacientes");
         return "patients";
     }
 

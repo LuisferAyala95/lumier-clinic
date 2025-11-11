@@ -21,11 +21,16 @@
     </definition>
 
     <definition name="patients" extends="homeLayout">
-        <put-attribute name="content" value="/WEB-INF/views/jsp/patientAddEditComponent.jsp" />
+        <put-attribute name="content" value="/WEB-INF/views/jsp/patient/patientListComponent.jsp" />
     </definition>
 
     <definition name="diagnoses" extends="homeLayout">
         <put-attribute name="content" value="/WEB-INF/views/jsp/diagnosisListComponent.jsp" />
+    </definition>
+
+    <!-- Formulario para agregar Pacientes -->
+    <definition name="patientAddEdit" extends="homeLayout">
+        <put-attribute name="content" value="/WEB-INF/views/jsp/patient/patientAddEditComponent.jsp" />
     </definition>
 
 
