@@ -9,7 +9,7 @@
 			Dashboard
 		</a>
 
-	<a href="#" class="menu-item">
+	<a href="${pageContext.request.contextPath}/scheduleAppointment" class="menu-item">
 		<span style="padding-right: 10px">
 			<i class="bi bi-calendar-week"></i>
          </span>

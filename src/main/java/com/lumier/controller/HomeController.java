@@ -1,6 +1,7 @@
 package com.lumier.controller;
 
 import com.lumier.model.Paciente;
+import com.lumier.service.Appointment.AppointmentService;
 import com.lumier.service.Patient.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,9 +27,12 @@ public class HomeController {
         return "dashboard";
     }
 
-    @RequestMapping("/appointments")
-    public String appointments() {
-        return "appointments";
+    @RequestMapping("/scheduleAppointment")
+    public String appointments(Model model) {
+        List<Paciente> patients = patientService.findAll();
+        model.addAttribute("patients", patients);
+        model.addAttribute("title", "Registrar cita de atención inmediata");
+        return "scheduleAppointment";
     }
 
     @RequestMapping("/patients")
@@ -44,4 +48,6 @@ public class HomeController {
     public String diagnoses() {
         return "diagnoses";
     }
+
+
 }

@@ -16,10 +16,6 @@
         <put-attribute name="content" value="/WEB-INF/views/jsp/dashboard.jsp" />
     </definition>
 
-    <definition name="appointments" extends="homeLayout">
-        <put-attribute name="content" value="/WEB-INF/views/jsp/appointmentAddEditComponent.jsp" />
-    </definition>
-
     <definition name="patients" extends="homeLayout">
         <put-attribute name="content" value="/WEB-INF/views/jsp/patient/patientListComponent.jsp" />
     </definition>
@@ -31,6 +27,11 @@
     <!-- Formulario para agregar Pacientes -->
     <definition name="patientAddEdit" extends="homeLayout">
         <put-attribute name="content" value="/WEB-INF/views/jsp/patient/patientAddEditComponent.jsp" />
+    </definition>
+
+    <!-- Formulario para agregar Citas -->
+    <definition name="scheduleAppointment" extends="homeLayout">
+        <put-attribute name="content" value="/WEB-INF/views/jsp/appointment/appointmentAddEditComponent.jsp" />
     </definition>
 
 

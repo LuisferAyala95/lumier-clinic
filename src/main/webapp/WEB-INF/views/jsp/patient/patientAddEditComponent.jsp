@@ -9,7 +9,7 @@
 				<div class="col-md-6">
                     <div class="form-group">
                 	    <label for="tipoDocumento" style="font-weight: 500">Tipo de documento</label>
-                        <select class="form-control" id="tipoDocumento">
+                        <select class="form-control" id="tipoDocumento" required>
                           <option>Tarjeta de identidad</option>
                           <option>Cédula</option>
                           <option>Cédula extranjera</option>
@@ -21,7 +21,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                 	    <label for="Identification" style="font-weight: 500">Identificación</label>
-                            <input type="text" class="form-control" id="Identification">
+                            <input type="text" class="form-control" id="Identification" required>
                     </div>
                 </div>
 			</div>
@@ -30,13 +30,13 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="names" style="font-weight: 500">Nombres</label>
-                        <input type="text" class="form-control" id="names">
+                        <input type="text" class="form-control" id="names" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="lastnames" style="font-weight: 500">Apellidos</label>
-                            <input type="text" class="form-control" id="lastnames">
+                        <input type="text" class="form-control" id="lastnames" required>
                     </div>
                 </div>
             </div>
@@ -95,6 +95,4 @@
             </div>
         </div>
 	</form>
-
-<div id="alerta" class="alert mt-3 d-none"></div>
 </div>
