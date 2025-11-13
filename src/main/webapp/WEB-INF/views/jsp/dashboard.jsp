@@ -15,7 +15,7 @@
 		<div class="row" style="padding: 0px 2rem; display: flex; gap: 1rem; flex-direction: column;">
 
         	<div class="col-md-12 container-border" style="padding: 10px">
-				<div style="display: flex; gap: 2px; align-items: center;">
+				<div style="display: flex; gap: 20px; align-items: center;">
 					<h3>Citas pendientes por Diagnósticos</h3>
 					<span class="notification-pending">${fn:length(appointments)}</span>
 				</div>

@@ -3,6 +3,7 @@ package com.lumier.service.User;
 import com.lumier.model.Usuario;
 import com.lumier.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +14,10 @@ public class UserServiceImpl implements UserService{
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
 
     @Override
     public List<Usuario> findAll() {
@@ -26,6 +31,9 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public Usuario save(Usuario usuario) {
+        String rawPassword = usuario.getPassword();
+        String encodedPassword = passwordEncoder.encode(rawPassword);
+        usuario.setPassword(encodedPassword);
         return userRepository.save(usuario);
     }
 

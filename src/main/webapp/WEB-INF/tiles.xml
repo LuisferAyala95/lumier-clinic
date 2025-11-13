@@ -28,6 +28,10 @@
         <put-attribute name="content" value="/WEB-INF/views/jsp/diagnosis/diagnosisListComponent.jsp" />
     </definition>
 
+    <definition name="users" extends="homeLayout">
+        <put-attribute name="content" value="/WEB-INF/views/jsp/user/userListComponent.jsp" />
+    </definition>
+
     <!-- Formulario para agregar Pacientes -->
     <definition name="patientAddEdit" extends="homeLayout">
         <put-attribute name="content" value="/WEB-INF/views/jsp/patient/patientAddEditComponent.jsp" />
@@ -41,6 +45,11 @@
     <!-- Formulario para agregar Diagnósticos -->
     <definition name="diagnosisAddEdit" extends="homeLayout">
         <put-attribute name="content" value="/WEB-INF/views/jsp/diagnosis/diagnosisAddEditComponent.jsp" />
+    </definition>
+
+    <!-- Formulario para agregar Usuarios -->
+    <definition name="userAddEdit" extends="homeLayout">
+        <put-attribute name="content" value="/WEB-INF/views/jsp/user/userAddEditComponent.jsp" />
     </definition>
 
 

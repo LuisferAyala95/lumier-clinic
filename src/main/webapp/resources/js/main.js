@@ -109,6 +109,36 @@ function saveDiagnosis(e) {
         }
     });
 }
+function saveUser(e) {
+	e.preventDefault();
+
+	const usuario = {
+				nombre: $("#name").val(),
+                email: $("#email").val(),
+                rol: {
+                    id: $("#rol").val()
+                },
+                password: $("#password").val(),
+                activo: 1,
+	}
+
+
+	$.ajax({
+		url: contextPath + '/api/users',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(usuario),
+        success: function(res) {
+            $('#userAddEdit')[0].reset();
+
+            toastr.success('Usuario guardado exitosamente', 'Éxito');
+        },
+        error: function(err) {
+                toastr.error('Error al guardar el Usuario', 'Error');
+                console.error(err);
+        }
+    });
+}
 
 function redirectToAppointmentList(e) {
 	e.preventDefault();
@@ -126,5 +156,6 @@ function redirectToDiagnosis(e) {
 $(document).on('submit', 'form#patientAddEdit', savePatient);
 $(document).on('submit', 'form#appointmentAddEdit', saveAppointment);
 $(document).on('submit', 'form#diagnosisAddEdit', saveDiagnosis);
+$(document).on('submit', 'form#userAddEdit', saveUser);
 $(document).on('click', '#viewAppointments', redirectToAppointmentList);
 $(document).on('click', '#btoDiagnosis', redirectToDiagnosis);

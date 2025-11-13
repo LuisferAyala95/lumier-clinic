@@ -30,7 +30,7 @@
 	    Diagnósticos
 	</a>
 
-	<a href="#" class="menu-item">
+	<a href="${pageContext.request.contextPath}/users" class="menu-item">
 		<span style="padding-right: 10px">
 			<i class="bi bi-person-fill-gear"></i>
          </span>

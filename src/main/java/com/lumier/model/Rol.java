@@ -3,6 +3,7 @@ package com.lumier.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "rol")
 public class Rol {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,7 +13,7 @@ public class Rol {
     private String nombre;
 
     @Column(nullable = false)
-    private String[] permisos;
+    private String permisos;
 
     public Long getId() {
         return id;
@@ -30,11 +31,11 @@ public class Rol {
         this.nombre = nombre;
     }
 
-    public String[] getPermisos() {
+    public String getPermisos() {
         return permisos;
     }
 
-    public void setPermisos(String[] permisos) {
+    public void setPermisos(String permisos) {
         this.permisos = permisos;
     }
 }

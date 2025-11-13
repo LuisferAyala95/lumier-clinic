@@ -90,6 +90,25 @@
             <version>${spring.version}</version>
         </dependency>
 
+        <!-- SPRING SECURITY -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>5.7.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>5.7.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>5.7.8</version>
+        </dependency>
+
       <!-- SPRING DATA JPA -->
       <dependency>
           <groupId>org.springframework.data</groupId>
