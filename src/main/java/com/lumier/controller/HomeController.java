@@ -26,7 +26,7 @@ public class HomeController {
     @Autowired
     private DiagnosisService diagnosisService;
 
-    @RequestMapping("/")
+    @RequestMapping("/home")
     public String home() {
        return "homeLayout";
     }

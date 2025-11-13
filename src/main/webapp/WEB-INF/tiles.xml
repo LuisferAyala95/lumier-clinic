@@ -52,6 +52,10 @@
         <put-attribute name="content" value="/WEB-INF/views/jsp/user/userAddEditComponent.jsp" />
     </definition>
 
+    <!-- Formulario Login -->
+    <definition name="login" template="/WEB-INF/views/jsp/login/login.jsp">
+    </definition>
+
 
 
 
