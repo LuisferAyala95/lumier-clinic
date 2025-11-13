@@ -8,13 +8,27 @@
 	<form id="appointmentAddEdit">
 
 		<div class="form-group mb-3">
-            <label for="patient" style="font-weight: 500">Género</label>
-            <select class="form-control" id="patient" required>
-				 <option value="" disabled selected>Seleccione un Paciente</option>
-				 <c:forEach var="patient" items="${patients}">
-					<option value="${patient.id}">${patient.nombres} ${patient.apellidos}</option>
-				</c:forEach>
-            </select>
+            <label for="patient" style="font-weight: 500">Paciente</label>
+
+            <c:choose >
+                <c:when test="${not empty param.patientId}">
+					<select class="form-control" id="patient" required>
+                         <c:forEach var="patient" items="${patients}">
+							<c:if test="${patient.id eq param.patientId}">
+								<option value="${patient.id}" selected>${patient.nombres} ${patient.apellidos}</option>
+							</c:if>
+                        </c:forEach>
+                    </select>
+				</c:when>
+				<c:otherwise>
+		            <select class="form-control" id="patient" required>
+                         <option value="" disabled selected>Seleccione un Paciente</option>
+                         <c:forEach var="patient" items="${patients}">
+                            <option value="${patient.id}">${patient.nombres} ${patient.apellidos}</option>
+                        </c:forEach>
+                    </select>
+				</c:otherwise>
+            </c:choose>
         </div>
 
 		<div class="row mb-3">
@@ -38,9 +52,9 @@
                     <label for="eps" style="font-weight: 500">EPS</label>
                     <select class="form-control" id="eps" required>
                          <option value="" disabled selected>Seleccione una EPS</option>
-                         <option value="1">EPS 1</option>
-                         <option value="2">EPS 2</option>
-                         <option value="3">EPS 3</option>
+                         <option value="Coosalud">Coosalud</option>
+                         <option value="Savia salud">Savia salud</option>
+                         <option value="Sanitas">Sanitas</option>
                     </select>
                 </div>
             </div>
@@ -49,9 +63,9 @@
                     <label for="exam" style="font-weight: 500">Tipo de Exámen</label>
                     <select class="form-control" id="exam" required>
                          <option value="" disabled selected>Seleccione un Tipo de Exámen</option>
-                         <option value="1">Exámen 1</option>
-                         <option value="2">Exámen 2</option>
-                         <option value="3">Exámen 3</option>
+                         <option value="Resonancia magnética">Resonancia magnética</option>
+                         <option value="Tomografía computarizada">Tomografía computarizada</option>
+                         <option value="Mamografía">Mamografía</option>
                     </select>
                 </div>
             </div>

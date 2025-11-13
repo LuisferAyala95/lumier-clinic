@@ -19,6 +19,14 @@ public class AppointmentRestController {
 
     @PostMapping
     public ResponseEntity<Cita> save (@RequestBody Cita appointment) {
+        if (appointment.getId() != null) {
+            Cita savedAppointment = appointmentService.findById(appointment.getId())
+                    .orElseThrow(()-> new RuntimeException("Cita no encontrada con id " + appointment.getId()));
+
+            savedAppointment.setEstado(appointment.getEstado());
+            appointmentService.save(savedAppointment);
+            ResponseEntity.ok(savedAppointment);
+        }
         Cita appointmentSaved = appointmentService.save((appointment));
         return  ResponseEntity.ok(appointmentSaved);
     }

@@ -23,7 +23,7 @@
 	    Pacientes
 	</a>
 
-	<a href="#" class="menu-item">
+	<a href="${pageContext.request.contextPath}/diagnoses" class="menu-item">
 		<span style="padding-right: 10px">
 			<i class="bi bi-clipboard2-pulse-fill"></i>
          </span>

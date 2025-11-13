@@ -1,9 +1,16 @@
 :root {
 	--background-dark: #0f172a;
+	--background-light: #f8fafc;
+	--background-card-header: #1e293b;
+	--background-card-body: #313e54;
 	--border-color-dark: #1e293b;
 	--color-gray: #72777d;
 	--color-violet: #4f46e5;
-	--color-white: ffffff
+	--color-white: #ffffff;
+	--color-background-notification-1: #1e3a8a;
+	--color-text-notification-1: #60a5fa;
+	--color-background-notification-2: #f2db74;
+	--color-text-notification-2:#8a6d3b;
 }
 
 
@@ -56,8 +63,9 @@ input::placeholder {
   opacity: 1; /* asegura que el color se muestre con la opacidad completa */
 }
 
-
-
+.background-light {
+	background-color: var(--background-light);
+}
 
 .menu {
     flex-direction: column;
@@ -88,8 +96,69 @@ input::placeholder {
 	border-radius: 8px;
 }
 
+.container-editor {
+    border-radius: 8px;
+    border-color: var(--border-color-dark);
+}
+
+.card-header {
+	background-color: var(--background-card-header) !important;
+	color: var(--color-white) !important;
+	font-weight: 700;
+}
+
+.card-body {
+	background-color: var(--background-card-body);
+	color: var(--color-white);
+	display: flex;
+    gap: 10px;
+    padding: 5px 0px 0px 0px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card-body-content {
+	font-weight: bold;
+	font-size: 12px;
+	padding: 1px;
+}
+
+.card-not-result {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+
+.notification-today {
+	background-color: var(--color-background-notification-1);
+	color: var(--color-text-notification-1);
+	font-weight: 700;
+	width: 40px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-pending {
+	background-color: var(--color-background-notification-2);
+    color: var(--color-text-notification-2);
+    font-weight: 700;
+    width: 40px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .btn-save {
-	background-color: #4f46e5;
+	background-color: var(--color-violet);
 	color: var(--color-white);
 	font-weight: 700;
 }
@@ -100,7 +169,6 @@ input::placeholder {
 }
 
 .btn-cancel {
-	color: var(--color-white);
 	font-weight: 700;
 }
 
